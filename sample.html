@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module">
+      import { loadPyodide} from "./pyodide.mjs";
+      async function main() {
+          let pyodide = await loadPyodide({ indexURL : "./"});
+          await pyodide.loadPackage("./sample-0.0.0-py3-none-any.whl");
+          await pyodide.runPython(`
+            from sample import hello
+            hello.helloPyodide()
+          `);
+        };
+      main();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -2,9 +2,9 @@
 <html>
   <head>
     <script type="module">
-      import { loadPyodide} from "./pyodide.mjs";
+      import { loadPyodide} from "./pyodide/pyodide.mjs";
       async function main() {
-          let pyodide = await loadPyodide({ indexURL : "./"});
+          let pyodide = await loadPyodide({ indexURL : "/pyodide"});
           await pyodide.loadPackage("./sample-0.0.0-py3-none-any.whl");
           await pyodide.runPython(`
             from sample import hello

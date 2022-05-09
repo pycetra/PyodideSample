@@ -23,6 +23,5 @@ tar -jxvf pyodide-build-0.20.0a1.tar.bz2
 
 cp dist/sample-0.0.0-py3-none-any.whl ./pyodide/
 cp sample.html ./pyodide/
-cd ./pyodide
 python -m http.server 5000
 ```

@@ -4,7 +4,7 @@
     <script type="module">
       import { loadPyodide} from "./pyodide/pyodide.mjs";
       async function main() {
-          let pyodide = await loadPyodide({ indexURL : "/pyodide"});
+          let pyodide = await loadPyodide();
           await pyodide.loadPackage("../dist/sample-0.0.0-py3-none-any.whl");
           await pyodide.runPython(`
             from sample import hello
